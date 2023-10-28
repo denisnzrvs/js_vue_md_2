@@ -2,10 +2,10 @@
     <header class="header">
         <div>
             <img src="../assets/Logo white.svg" />
-            <div id="circular" v-show="isLoggedIn"></div>
             <h1>OCTOPUS</h1>
         </div>
         <div>
+            <div id="circular" v-show="isLoggedIn"></div>
             <ul>
                 <li id="full_name" v-show="isLoggedIn">{{ full_name }}</li>
                 <li><button href="#" @click="loginUser">{{ isLoggedIn ? "Logout" : "Login" }}</button></li>
@@ -55,10 +55,6 @@ export default {
 </script>
 
 <style scoped>
-body {
-    margin: 0px;
-}
-
 div {
     display: flex;
     align-items: center;
@@ -70,32 +66,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    margin: none;
+    margin-bottom: 5rem;
     width: 100%;
     background-color: #292934;
-    /* Set the width to 100% to make it span the entire page */
+    opacity: 75%;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: white;
-    /* Adjust the color to match your design */
 }
 
-/* Style for the button or other element on the right */
-.but {
-    background-color: #f1f1f1;
-    /* Adjust the background color */
-    color: #473d4b;
-    /* Adjust the text color */
-    padding: 10px 20px;
-    /* Adjust padding as needed */
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    text-decoration: none;
-}
 
 h1 {
     all: none;
@@ -105,8 +87,8 @@ h1 {
 }
 
 #circular {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     background-color: aqua;
     border-radius: 50%;
 }
@@ -126,7 +108,7 @@ li {
 
 button {
     font-family: "Roboto", sans-serif;
-    background-color: #292934;
+    background-color: #7c7c89;
     color: white;
     padding: 10px 20px;
     border: none;

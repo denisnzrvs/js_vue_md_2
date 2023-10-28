@@ -1,6 +1,5 @@
 <template>
   <header>
-    <header-component />
   </header>
 
   <main>
@@ -35,6 +34,10 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
+}
+
+main {
+  background-color: #b0006c;
 }
 
 </style>

@@ -1,7 +1,5 @@
 <template>
     <song-filter-component @filter="handleFilter" />
-    <h1>SongListComponent</h1>
-    <p></p>
     <table>
         <thead>
             <tr>
@@ -19,12 +17,12 @@
 </template>
 
 <script>
-import songs from "../getSongs";
+import { useSongsStore } from '../store';
 
 export default {
     data() {
         return {
-            songs: songs.slice(), // Create a copy of the original array
+            songs: useSongsStore().all_songs.slice(), // Create a copy of the original array
         };
     },
     methods: {
@@ -34,10 +32,21 @@ export default {
             } else if (option === 'Artist') {
                 this.songs.sort((a, b) => a.artist.localeCompare(b.artist));
             } else if (option === 'None') {
-                this.songs = songs.slice(); // Reset to the default order
+                this.songs = useSongsStore().all_songs.slice(); // Reset to the default order
             }
         },
     },
 };
 </script>
-<style></style>
+<style>
+th,
+td {
+    color: white;
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    table-layout: auto;
+}
+</style>

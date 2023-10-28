@@ -1,3 +1,3 @@
-import songs from '../songs-example.json';
+import songs_data from '../songs-example.json';
 
-export default songs;
+export default songs_data;

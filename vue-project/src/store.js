@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-
+import songs_data from './getSongs';
 
 export const useUserStore = defineStore('user', {
     state: () => ({
@@ -13,17 +13,14 @@ export const useUserStore = defineStore('user', {
     actions: {
         login() {
             this.loggedInStatus = true;
+
             const now = new Date();
-            const timestamp = `${now.getDate()}/${now.getMonth()}/${now.getFullYear()} - ${now.getHours()}:${now.getMinutes()}`;
+            const timestamp = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} - ${now.getHours()}:${now.getMinutes()}`;
             this.loggedAtTimestamp.push(timestamp);
         },
 
         logout() {
             this.loggedInStatus = false;
-            const now = new Date();
-            const timestamp = `${now.getDate()}/${now.getMonth()}/${now.getFullYear()} - ${now.getHours()}:${now.getMinutes()}`;
-            this.loggedAtTimestamp.push(timestamp);
-
         },
 
         resetUser() {
@@ -34,4 +31,9 @@ export const useUserStore = defineStore('user', {
             this.loggedAtTimestamp = [];
         },
     },
+});
+export const useSongsStore = defineStore('songs', {
+    state: () => ({
+        all_songs: songs_data, // Set songs as a global state variable
+    }),
 });

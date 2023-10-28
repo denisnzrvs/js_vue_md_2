@@ -1,8 +1,11 @@
 <template>
     <div class="nav" v-if="isLoggedIn">
-        <button :class="{ active: homeActive }" @onClick="showHome"><router-link to="/home">HOME</router-link></button>
-        <button :class="{ active: aboutMeActive }" @onClick="showAboutMe"><router-link to="/about-me">ABOUT
-                ME</router-link></button>
+         <button :class="{ active: $route.path === '/home' }">
+          <router-link to="/home">HOME</router-link>
+        </button>
+        <button :class="{ active: $route.path === '/about-me' }">
+          <router-link to="/about-me">ABOUT ME</router-link>
+        </button>
     </div>
 </template>
 <script>
@@ -25,16 +28,6 @@ export default {
             aboutMeActive: false,
         };
     },
-    methods: {
-        showHome() {
-            this.homeActive = true;
-            this.aboutMeActive = false;
-        },
-        showAboutMe() {
-            this.homeActive = false;
-            this.aboutMeActive = true;
-        },
-    },
 };
 </script>   
 <style>
@@ -46,20 +39,30 @@ export default {
     height: 100%;
 }
 
-button.active {
-    background-color: orange;
+
+.router-link:visited {
     color: white;
+    text-decoration: none;
 }
 
+
+
 button {
-    margin-bottom: 1rem;
     font-family: "Roboto", sans-serif;
-    background-color: #473d4b;
+    background-color: #7c7c89;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 50px;
     font-weight: bold;
     text-decoration: none;
+    opacity: 75%;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.active {
+    background-color: orange;
+    color: white;
 }
 </style>
