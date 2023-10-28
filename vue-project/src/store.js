@@ -18,6 +18,14 @@ export const useUserStore = defineStore('user', {
             this.loggedAtTimestamp.push(timestamp);
         },
 
+        logout() {
+            this.loggedInStatus = false;
+            const now = new Date();
+            const timestamp = `${now.getDate()}/${now.getMonth()}/${now.getFullYear()} - ${now.getHours()}:${now.getMinutes()}`;
+            this.loggedAtTimestamp.push(timestamp);
+
+        },
+
         resetUser() {
             this.firstName = 'name';
             this.lastName = 'surname';

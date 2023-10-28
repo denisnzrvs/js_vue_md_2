@@ -32,20 +32,20 @@ IMPORTANT ABOUT SUBMISSIONS: You need to put your homework on a github page. The
     [X] 3.2. /home      - HomeComponent (can navigate only if global `user` logged in status is `true`)
     [X] 3.3. /about-me  - AboutMe (can navigate only if global `user` logged in status is `true`)
 
-[] 4. App (check Figma for design reference)
+[X] 4. App (check Figma for design reference)
     [X] 4.1. Add HeaderComponent
-    [] 4.2. Add NavComponent:
+    [X] 4.2. Add NavComponent:
         * Visible only when `user` logged in status is `true`
-	[] 4.3. Setup router element
+	[X] 4.3. Setup router element
 
-[] 5. HeaderComponent (check Figma for design reference)
-    [] 5.1. Avatar: it must be a circle with a background color of your choice;
+[X] 5. HeaderComponent (check Figma for design reference)
+    [X] 5.1. Avatar: it must be a circle with a background color of your choice;
         * Visible or destroyed based on global `user` logged in status;
-	[] 5.2. A new computed value `full_name` must be created by combining first name & last name from global `user` object;
+	[X] 5.2. A new computed value `full_name` must be created by combining first name & last name from global `user` object;
 	    * You must display this `full_name` variable in the HTML where your first and last name are expected.
         * Visible or destroyed based on global `user` logged in status;
-	[] 5.3. Button with text "LOGIN" or "LOGOUT" depending on the global `user` logged in status
-    [] 5.4. By pressing the "LOGIN" button:
+	[X] 5.3. Button with text "LOGIN" or "LOGOUT" depending on the global `user` logged in status
+    [~] 5.4. By pressing the "LOGIN" button:
 			* the system `alert` notification window appears with the question: "Do you want to log in?" with options, "Yes" & "Cancel".
 				- Pressing `Yes` executes following actions:
                     * call global method to login user (task 2.2.)
@@ -55,31 +55,31 @@ IMPORTANT ABOUT SUBMISSIONS: You need to put your homework on a github page. The
 					* Pressing `Yes` executes the following actions
 						- call global method to log out user (task 2.3.)
 
-6. NavComponent (check Figma for design reference)
-    6.1. Router links for routes:
+[~] 6. NavComponent (check Figma for design reference)
+    [X] 6.1. Router links for routes:
         * /home
         * /about-me
-    6.2. Style active class to make active route link stand out
+    [~] 6.2. Style active class to make active route link stand out
 
-7. HomeComponent (check Figma for design reference)
-    7.1. Display elements:
+7. [X] HomeComponent (check Figma for design reference)
+    [X] 7.1. Display elements:
         * title
         * SongListComponent
 
-8. SongFilterComponent (check Figma for design reference)
-    8.1. Add three functional buttons:
-        * None - will display `SongListComponent` song list in default order
-        * Name - will order `SongListComponent` song list in acceding order based on `name` property
-        * Artist - will order `SongListComponent` song list in ascending order based on `artist` property
-    8.2. Visually indicate active filter button
+8. [~] SongFilterComponent (check Figma for design reference)
+    [X] 8.1. Add three functional buttons:
+        [X] * None - will display `SongListComponent` song list in default order
+        [X] * Name - will order `SongListComponent` song list in acceding order based on `name` property
+        [X] * Artist - will order `SongListComponent` song list in ascending order based on `artist` property
+    [ ] 8.2. Visually indicate active filter button
 
-9. SongListComponent (check Figma for design reference)
-    9.1. Display `SongFilterComponent` component
-    9.2. Create table with two header columns:
-        * Name
-        * Artist
-    9.3. Display all songs from the global variable `all_songs`
-    9.4. You need to sort `all_songs` based on selected filter button in `SongFilterComponent`
+9. [X]SongListComponent (check Figma for design reference)
+    [X] 9.1. Display `SongFilterComponent` component
+    [X] 9.2. Create table with two header columns:
+        [] * Name
+        [X] * Artist
+    [X] 9.3. Display all songs from the global variable `all_songs`
+    [X] 9.4. You need to sort `all_songs` based on selected filter button in `SongFilterComponent`
 
 10. AboutMeComponent (check Figma for design reference)
     10.1. Add button with following functionality:

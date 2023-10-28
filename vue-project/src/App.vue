@@ -1,10 +1,11 @@
 <template>
   <header>
+    <header-component />
   </header>
 
   <main>
-        <header-component/>
-    <router-view></router-view>
+    <router-view>
+    </router-view>
   </main>
 </template>
 
@@ -35,4 +36,5 @@ header {
     flex-wrap: wrap;
   }
 }
+
 </style>
